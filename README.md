@@ -17,7 +17,7 @@ Expected Outcome
 
 This analysis seeks to rank subscribers and services by revenue, monitor period-over-period usage changes, and segment customers into performance tiers. The insights will support better pricing strategies, targeted retention campaigns, and improved regional performance management.
 
-STEP 2 — Success Criteria (Reference: Telecom Scenario)
+STEP 2 — Success Criteria
 
 1.Determine the top five subscribers by revenue within each region → Achieved using RANK() to rank subscribers based on total revenue per region.
 
@@ -29,7 +29,10 @@ STEP 2 — Success Criteria (Reference: Telecom Scenario)
 
 5.Calculate a three-month moving average of service revenue or usage → Implemented with AVG() OVER (ORDER BY billing_month ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) to smooth short-term fluctuations.
 
-Step 3: Database Schema Design Design at least three (3) related tables with primary and foreign keys. An ER diagram is mandatory
+Step 3: Database Schema Design Design
+at least three (3) related tables with primary and foreign keys. An ER diagram is mandatory
+![ER Diagram]()
+
 
 Step 4: Part A — SQL JOINs Implementation Demonstrate correct and meaningful use of SQL JOINs using the tables from Step 3. Required JOIN Types
 
@@ -79,12 +82,23 @@ Interpretation This query calclates the average revenue across all transactions 
 
 Key Insights.
 
-Descriptive — What happened? Revenue analysis shows clear differentiation among subscribers and regions. A limited number of high-value subscribers account for a significant share of total revenue, while running revenue trends indicate stable but uneven growth across services and billing periods. Customer segmentation confirms distinct revenue tiers within the subscriber base.
+Descriptive — What happened?
+Revenue analysis shows clear differentiation among subscribers and regions. A limited number of high-value subscribers account for a significant share of total revenue, while running revenue trends indicate stable but uneven growth across services and billing periods. Customer segmentation confirms distinct revenue tiers within the subscriber base.
 
-Diagnostic — Why did it happen? Revenue disparities are driven by differences in subscriber usage behavior and service consumption levels. Top-ranked subscribers consistently generate higher revenue due to sustained or increasing usage, while lower tiers reflect limited or inconsistent service engagement. Regional variations suggest differences in market demand, service adoption, or customer profiles.
+Diagnostic — Why did it happen?
+Revenue disparities are driven by differences in subscriber usage behavior and service consumption levels. 
+Top-ranked subscribers consistently generate higher revenue due to sustained or increasing usage, while lower tiers reflect limited or inconsistent service engagement. 
+Regional variations suggest differences in market demand, service adoption, or customer profiles.
 
-Prescriptive — What should be done next? The company should prioritize retention and personalized offers for high-value subscribers to protect core revenue streams. Mid-tier customers represent an opportunity for upselling through targeted service bundles and pricing incentives. Regions or services with slower growth should be evaluated for network performance, pricing competitiveness, and marketing effectiveness, with ongoing monitoring through analytical dashboards built on window functions.
+Prescriptive — What should be done next?
+The company should prioritize retention and personalized offers for high-value subscribers to protect core revenue streams.
+Mid-tier customers represent an opportunity for upselling through targeted service bundles and pricing incentives.
+Regions or services with slower growth should be evaluated for network performance, pricing competitiveness, and marketing effectiveness, with ongoing monitoring through analytical dashboards built on window functions.
 
-References 1.Oracle. SQL Analytical (Window) Functions. Oracle Database Official Documentation. 2.PostgreSQL Global Development Group. Window Functions. PostgreSQL Official Documentation. 3.W3Schools. SQL Window Functions Tutorial. Used for syntax clarification and examples. 4.YouTube. SQL Tutorials. Educational videos used to reinforce understanding of SQL functions and JOIN operations.
+References
+1.Oracle. SQL Analytical (Window) Functions. Oracle Database Official Documentation.
+2.PostgreSQL Global Development Group. Window Functions. PostgreSQL Official Documentation. 
+3.W3Schools. SQL Window Functions Tutorial. Used for syntax clarification and examples. 
+4.YouTube. SQL Tutorials. Educational videos used to reinforce understanding of SQL functions and JOIN operations.
 
 “All sources were properly cited. Implementations and analysis represent original work. No AIgenerated content was copied without attribution or adaptation.”
