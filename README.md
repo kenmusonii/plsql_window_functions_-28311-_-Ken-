@@ -37,28 +37,33 @@ at least three (3) related tables with primary and foreign keys. An ER diagram i
 Step 4: Part A — SQL JOINs Implementation Demonstrate correct and meaningful use of SQL JOINs using the tables from Step 3. Required JOIN Types
 
 1️⃣ INNER JOIN Comment:This query will help us retrieve transactions with valid customers and services.
+![ER Diagram](image2.png)
 
 Bussiness Interpretation This query displays only valid usage transaction linked to real subscribers and services. It represents actual revenue-generating activity for the telecom.
 
 2️⃣ LEFT JOIN Comment: this will help us to Identify customers who have never made a transaction.
+![ER Diagram](image3.png)
 
 Business interpretation.
 
 The result shows that all registered subscribers are active users. This indicates good customer engagement with the company’s services.
 
 3️⃣ RIGHT JOIN Comment:this wil help us detect services with no sales activity.
+![ER Diagram](image4.png)
 
 Business interpretation.
 
 Every service offered by the company has generated usage. This shows that all products are contributing to business activity.
 
 4️⃣ FULL OUTER JOIN Comment : this shall help us compare subscribers and services including unmatched records
+![ER Diagram](image5.png)
 
 Business interpretation.
 
 This query provides a complete overview of customer–service relationships. It confirms that all customers and services are actively connected through usage.
 
 5️⃣ SELF JOIN This will help us Compare subscribers within the same region
+![ER Diagram](image6.png)
 
 Business interpretation.
 
@@ -69,14 +74,19 @@ Step 5: Part B — Window Functions Implementation.
 Implement all four categories of window functions.
 
 1.Ranking functions ROW_NUMBER, RANK, DENSE_RANK, PERCENT_RANK Use case: Top customers by total revenue
+![ER Diagram](image7.png)
 
 Interpretation This query ranks subscribers based on the total revenue they generate. It helps identify top-performing customers and understand their relative contribution to revenue.
 
 2️⃣ Aggregate Window Functions SUM, AVG, MIN, MAX (ROWS & RANGE) Use case: Running totals and revenue trends
 
 Query 1: ROWS frame
+![ER Diagram](image8.png)
 
-Interpretation This query calculates a running total of revenue over time.Each row shows the cumulative revenue up to that transaction date.. Query 2: RANGE frame We switch to a numeric column (transaction_id) to legally use RANGE for my version
+Interpretation This query calculates a running total of revenue over time.Each row shows the cumulative revenue up to that transaction date..
+
+Query 2: RANGE frame We switch to a numeric column (transaction_id) to legally use RANGE for my version
+![ER Diagram](image9.png)
 
 Interpretation This query calclates the average revenue across all transactions up to the current transaction. Using a RANGE frame groups rows based on numeric orderingIt helps analyse revenue trends across transaction progression.
 
