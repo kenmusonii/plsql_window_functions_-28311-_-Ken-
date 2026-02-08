@@ -31,7 +31,7 @@ STEP 2 — Success Criteria
 
 Step 3: Database Schema Design Design
 at least three (3) related tables with primary and foreign keys. An ER diagram is mandatory
-![ER Diagram]()
+![ER Diagram](image1.png)
 
 
 Step 4: Part A — SQL JOINs Implementation Demonstrate correct and meaningful use of SQL JOINs using the tables from Step 3. Required JOIN Types
